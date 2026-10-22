@@ -60,7 +60,7 @@ Each addon contains its own module structure and implementation files.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/enterprise-operations-procurement-suite.git
+   git clone https://github.com/IbrahemIsbieh/Enterprise-Operations-Procurement-Suite
    ```
 
 2. Copy the five addon directories into a directory included in your Odoo `addons_path`, or configure the repository path directly in your Odoo configuration.
