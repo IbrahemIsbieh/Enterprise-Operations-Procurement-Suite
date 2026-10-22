@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eops_procurement_tender_form_finance"
+            model="ir.ui.view">
+        <field name="name">
+            eops.procurement.tender.form.finance
+        </field>
+        <field name="model">eops.procurement.tender</field>
+        <field name="inherit_id"
+               ref="eops_procurement.view_eops_procurement_tender_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//sheet/div[hasclass('oe_title')]"
+                   position="before">
+
+                <div class="oe_button_box" name="button_box">
+
+                    <button name="action_view_vendor_bills"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-file-text-o"
+                            invisible="vendor_bill_count == 0">
+
+                        <field name="vendor_bill_count"
+                               widget="statinfo"
+                               string="Vendor Bills"/>
+
+                    </button>
+
+                </div>
+
+            </xpath>
+
+            <xpath expr="//sheet/notebook" position="before">
+
+                <group string="Financial Summary">
+                    <group>
+                        <field name="vendor_bill_total"
+                               readonly="True"/>
+                    </group>
+                    <group>
+                        <field name="vendor_bill_residual"
+                               readonly="True"/>
+                    </group>
+                </group>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

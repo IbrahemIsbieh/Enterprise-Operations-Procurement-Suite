@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eops_procurement_tender_form_inventory"
+            model="ir.ui.view">
+        <field name="name">
+            eops.procurement.tender.form.inventory
+        </field>
+        <field name="model">eops.procurement.tender</field>
+        <field name="inherit_id"
+               ref="eops_procurement.view_eops_procurement_tender_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header/field[@name='state']"
+                   position="before">
+
+                <button name="action_confirm_selected_purchase_order"
+                        type="object"
+                        string="Confirm Selected Purchase Order"
+                        class="btn-primary"
+                        groups="eops_core.group_eops_manager"
+                        invisible="state != 'awarded' or not selected_purchase_order_id or selected_purchase_order_state not in ('draft', 'sent')"/>
+
+            </xpath>
+
+            <xpath expr="//sheet/div[hasclass('oe_title')]"
+                   position="before">
+
+                <div class="oe_button_box" name="button_box">
+
+                    <button name="action_view_stock_receipts"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-truck"
+                            invisible="stock_picking_count == 0">
+
+                        <field name="stock_picking_count"
+                               widget="statinfo"
+                               string="Stock Receipts"/>
+
+                    </button>
+
+                </div>
+
+                <field name="selected_purchase_order_state"
+                       invisible="True"/>
+
+                <field name="stock_picking_count"
+                       invisible="True"/>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

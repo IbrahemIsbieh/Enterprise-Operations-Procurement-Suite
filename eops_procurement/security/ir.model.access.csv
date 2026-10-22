@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eops_procurement_tender_user,eops.procurement.tender.user,model_eops_procurement_tender,eops_core.group_eops_user,1,1,1,0
+access_eops_procurement_tender_manager,eops.procurement.tender.manager,model_eops_procurement_tender,eops_core.group_eops_manager,1,1,1,1
+access_eops_procurement_tender_vendor_user,eops.procurement.tender.vendor.user,model_eops_procurement_tender_vendor,eops_core.group_eops_user,1,1,1,0
+access_eops_procurement_tender_vendor_manager,eops.procurement.tender.vendor.manager,model_eops_procurement_tender_vendor,eops_core.group_eops_manager,1,1,1,1

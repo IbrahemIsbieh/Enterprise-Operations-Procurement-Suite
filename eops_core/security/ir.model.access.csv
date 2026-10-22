@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eops_department_user,eops.department.user,model_eops_department,eops_core.group_eops_user,1,0,0,0
+access_eops_department_manager,eops.department.manager,model_eops_department,eops_core.group_eops_manager,1,1,1,1
+access_eops_approval_policy_user,eops.approval.policy.user,model_eops_approval_policy,eops_core.group_eops_user,1,0,0,0
+access_eops_approval_policy_manager,eops.approval.policy.manager,model_eops_approval_policy,eops_core.group_eops_manager,1,1,1,1

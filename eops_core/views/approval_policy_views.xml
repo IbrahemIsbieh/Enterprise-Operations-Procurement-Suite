@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_eops_approval_policy_list" model="ir.ui.view">
+        <field name="name">eops.approval.policy.list</field>
+        <field name="model">eops.approval.policy</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="minimum_amount"/>
+                <field name="maximum_amount"/>
+                <field name="currency_id"/>
+                <field name="approver_id"/>
+                <field name="company_id"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eops_approval_policy_form" model="ir.ui.view">
+        <field name="name">eops.approval.policy.form</field>
+        <field name="model">eops.approval.policy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="sequence"/>
+                            <field name="approver_id"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="minimum_amount"/>
+                            <field name="maximum_amount"/>
+                            <field name="currency_id"/>
+                            <field name="company_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eops_approval_policy"
+            model="ir.actions.act_window">
+        <field name="name">Approval Policies</field>
+        <field name="res_model">eops.approval.policy</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

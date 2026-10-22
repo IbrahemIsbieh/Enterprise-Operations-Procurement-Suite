@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_eops_root"
+              name="Enterprise Operations"
+              sequence="10"
+              groups="eops_core.group_eops_user"/>
+
+    <menuitem id="menu_eops_configuration"
+              name="Configuration"
+              parent="menu_eops_root"
+              sequence="90"
+              groups="eops_core.group_eops_manager"/>
+
+    <menuitem id="menu_eops_departments"
+              name="Departments"
+              parent="menu_eops_configuration"
+              action="action_eops_department"
+              sequence="10"/>
+
+    <menuitem id="menu_eops_approval_policies"
+              name="Approval Policies"
+              parent="menu_eops_configuration"
+              action="action_eops_approval_policy"
+              sequence="20"/>
+</odoo>
