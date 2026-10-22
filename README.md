@@ -71,7 +71,6 @@ Each addon contains its own module structure and implementation files.
 
 5. Open **Apps**, update the Apps List, and install the required EOPS modules according to their dependencies.
 
-> Replace `YOUR_USERNAME` with your GitHub username before using the clone command.
 
 ## Testing
 
